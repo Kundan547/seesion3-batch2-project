@@ -1,0 +1,5 @@
+# Compile
+javac -d bin src/com/nameutility/NameScorer.java
+
+# Run
+java -cp bin com.nameutility.NameScorer names.txt
