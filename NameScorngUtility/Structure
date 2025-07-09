@@ -1,0 +1,16 @@
+.
+├── NameScorngUtility
+│   ├── bin
+│   │   └── com
+│   │       └── nameutility
+│   │           └── NameScorer.class
+│   ├── names.txt
+│   ├── Setup
+│   ├── src
+│   │   ├── com
+│   │   │   └── nameutility
+│   │   │       ├── NameScorer.class
+│   │   │       └── NameScorer.java
+│   │   └── module-info.java
+│   └── Structure
+└── README.md
