@@ -1,0 +1,24 @@
+# Create the S3 bucket in us-east-1 (⚠️ No create-bucket-configuration here)
+aws s3api create-bucket \
+  --bucket kundan-terraform-state-bucket \
+  --region us-east-1
+
+# Enable versioning on the bucket
+aws s3api put-bucket-versioning \
+  --bucket kundan-terraform-state-bucket \
+  --region us-east-1 \
+  --versioning-configuration Status=Enabled
+
+# Enable default server-side encryption using AES256
+aws s3api put-bucket-encryption \
+  --bucket kundan-terraform-state-bucket \
+  --region us-east-1 \
+  --server-side-encryption-configuration '{
+    "Rules": [
+      {
+        "ApplyServerSideEncryptionByDefault": {
+          "SSEAlgorithm": "AES256"
+        }
+      }
+    ]
+  }'
